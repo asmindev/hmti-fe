@@ -6,9 +6,10 @@ export default function Navbar() {
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 100) {
-                ref.current.classList.add('bg-dark')
+                //  add class bg-dark shadow-lg
+                ref.current.classList.add('bg-dark', 'shadow-lg')
             } else {
-                ref.current.classList.remove('bg-dark')
+                ref.current.classList.remove('bg-dark', 'shadow-lg')
             }
         }
         window.addEventListener('scroll', handleScroll)
