@@ -4,7 +4,7 @@ import Mobile from '@/components/Navbar/Mobile'
 import Jumbotron from './Jumbotron'
 import About from './About'
 import Footer from './Footer'
-import Feed from './Feed'
+// import Feed from './Feed'
 
 export default function Index() {
     const [isMobile, setIsMobile] = useState(false)

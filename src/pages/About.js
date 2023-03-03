@@ -1,6 +1,6 @@
 import React from 'react'
-
 import Kahim from '../../public/kahim.jpg'
+
 export default function About() {
     React.useEffect(() => {
         console.log(Kahim)

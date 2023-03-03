@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
 export default function Navbar() {
     // when scroll y > 100px, navbar will be change color
