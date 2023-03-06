@@ -10,6 +10,10 @@ module.exports = {
                 dark: '#0D0D0D',
                 light: '#F2F2F2',
             },
+            fontFamily: {
+                jakarta: ['Plus Jakarta Sans', 'sans-serif'],
+                roboto: ['Roboto Condensed', 'sans-serif'],
+            },
         },
     },
     plugins: [],

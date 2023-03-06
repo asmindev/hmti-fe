@@ -1,4 +1,6 @@
+/* eslint-disable jsx-a11y/mouse-events-have-key-events */
 import { useEffect, useRef } from 'react'
+import DropDownMenu from './Dropdown'
 
 export default function Navbar() {
     // when scroll y > 100px, navbar will be change color
@@ -36,17 +38,18 @@ export default function Navbar() {
                         >
                             Beranda
                         </a>
+                        <DropDownMenu />
                         <a
-                            href="#about"
+                            href="#"
                             className="text-gray-50 hover:text-primary transition duration-300 tracking-wider"
                         >
-                            Pengumuman
+                            Organisasi
                         </a>
                         <a
-                            href="#contact"
+                            href="#"
                             className="text-gray-50 hover:text-primary transition duration-300 tracking-wider"
                         >
-                            Berita
+                            Galeri
                         </a>
                     </div>
                     <div className="flex lg:items-center gap-12 text-sm font-fira">
