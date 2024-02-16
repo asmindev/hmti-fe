@@ -40,14 +40,14 @@ export default function Kabinet() {
                         alt="kabinet"
                         width={200}
                         height={400}
-                        className="w-full h-full object-cover"
+                        className="w-1/2 h-full object-cover"
                     />
                     <Image
                         src={wakil}
                         alt="kabinet"
-                        width={400}
-                        height={400}
-                        className="w-full h-full object-cover"
+                        width={200}
+                        height={200}
+                        className="w-1/2 h-full object-cover"
                     />
                 </div>
                 <div className="w-full flex justify-between">

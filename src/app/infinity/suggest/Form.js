@@ -14,13 +14,17 @@ import {
 function InputEl() {
     return (
         <div className="w-full flex flex-col gap-4">
-            <div className="flex w-full flex-wrap md:flex-nowrap mb-6 md:mb-0 gap-4">
-                <Input
-                    size={"lg"}
-                    type={"text"}
-                    label={"suggest"}
-                    placeholder="Masukkan Saran"
+            <div className="w-full bg-gray-200 rounded-xl overflow-hidden">
+                <textarea
+                    className="w-full px-4 py-2 outline-none bg-gray-200"
+                    placeholder="Saran anda"
+                    cols={5}
                 />
+                <div className="w-full bg-gray-300 px-4 py-1 flex justify-end">
+                    <Button type="button" className="bg-blue-500 text-white">
+                        kirim
+                    </Button>
+                </div>
             </div>
         </div>
     );
@@ -42,7 +46,7 @@ export default function Form() {
                 </Button>
             </div>
             <Modal backdrop={"blur"} isOpen={isOpen} onClose={onClose}>
-                <ModalContent>
+                <ModalContent className="h-fit mb-20 md:mb-0">
                     {(onClose) => (
                         <>
                             <ModalHeader className="flex flex-col gap-1">
@@ -51,18 +55,6 @@ export default function Form() {
                             <ModalBody>
                                 <InputEl />
                             </ModalBody>
-                            <ModalFooter>
-                                <Button
-                                    color="danger"
-                                    variant="light"
-                                    onPress={onClose}
-                                >
-                                    Close
-                                </Button>
-                                <Button color="primary" onPress={onClose}>
-                                    Submit
-                                </Button>
-                            </ModalFooter>
                         </>
                     )}
                 </ModalContent>
