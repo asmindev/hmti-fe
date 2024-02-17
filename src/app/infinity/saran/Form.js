@@ -5,10 +5,7 @@ import {
     ModalContent,
     ModalHeader,
     ModalBody,
-    ModalFooter,
-    Button,
     useDisclosure,
-    Input,
 } from "@nextui-org/react";
 
 function InputEl() {

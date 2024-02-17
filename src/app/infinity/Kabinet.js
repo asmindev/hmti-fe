@@ -106,8 +106,11 @@ export default function Kabinet() {
                                 mengutamakan nilai-nilai integritas, etika, dan
                                 kepemimpinan yang bertanggung jawab, membentuk
                                 kader mahasiswa yang peduli, kritis, dan
-                                berdedikasi. 5. Menjadikan HMTI FT-UHO menjadi
-                                organisasi yang jujur, amanah dan berintegritas.
+                                berdedikasi.
+                            </li>
+                            <li>
+                                Menjadikan HMTI FT-UHO menjadi organisasi yang
+                                jujur, amanah dan berintegritas.
                             </li>
                         </ul>
                     </div>
