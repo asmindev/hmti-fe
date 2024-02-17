@@ -40,7 +40,7 @@ export default function Page() {
                         Punya saran dan kritik?
                     </h1>
                     <Link
-                        href="/infinity/suggest"
+                        href="/infinity/saran"
                         className="text-base text-blue-600"
                     >
                         Silahkan klik disini

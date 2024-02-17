@@ -1,82 +1,26 @@
 "use client";
 import React from "react";
-import {
-    Popover,
-    PopoverTrigger,
-    PopoverContent,
-    Button,
-    Input,
-} from "@nextui-org/react";
+import { Popover, PopoverTrigger, PopoverContent } from "@nextui-org/react";
 
-export default function PopHover() {
-    const backdrops = ["opaque", "blur", "transparent"];
-
-    const content = (
-        <PopoverContent className="w-[240px]">
-            {(titleProps) => (
-                <div className="px-1 py-2 w-full">
-                    <p
-                        className="text-small font-bold text-foreground"
-                        {...titleProps}
-                    >
-                        Dimensions
-                    </p>
-                    <div className="mt-2 flex flex-col gap-2 w-full">
-                        <Input
-                            defaultValue="100%"
-                            label="Width"
-                            size="sm"
-                            variant="bordered"
-                        />
-                        <Input
-                            defaultValue="300px"
-                            label="Max. width"
-                            size="sm"
-                            variant="bordered"
-                        />
-                        <Input
-                            defaultValue="24px"
-                            label="Height"
-                            size="sm"
-                            variant="bordered"
-                        />
-                        <Input
-                            defaultValue="30px"
-                            label="Max. height"
-                            size="sm"
-                            variant="bordered"
-                        />
-                    </div>
-                </div>
-            )}
-        </PopoverContent>
-    );
-
+export default function PopHover({ children, content }) {
     return (
         <div className="flex flex-wrap gap-4">
-            <div>
-                <h1>pantek</h1>
-            </div>
-            {backdrops.map((backdrop) => (
-                <Popover
-                    key={backdrop}
-                    showArrow
-                    offset={10}
-                    placement="bottom"
-                    backdrop={backdrop}
-                >
-                    <PopoverTrigger>
-                        <Button
-                            color="warning"
-                            variant="flat"
-                            className="capitalize"
-                        >
-                            {backdrop}
-                        </Button>
-                    </PopoverTrigger>
+            <Popover
+                key={"blur"}
+                showArrow={true}
+                offset={10}
+                placement={"bottom"}
+                backdrop={"blur"}
+            >
+                <PopoverTrigger>
+                    <button type="button" className="focus:outline-none w-full">
+                        {children}
+                    </button>
+                </PopoverTrigger>
+                <PopoverContent className="w-96 p-0 overflow-hidden">
                     {content}
-                </Popover>
-            ))}
+                </PopoverContent>
+            </Popover>
         </div>
     );
 }

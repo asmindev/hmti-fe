@@ -9,7 +9,7 @@ const ProfileItems = [
     {
         label: "Profile HMTI",
         icon: <IconCupHot />,
-        href: "/infinity/kabinet",
+        href: "/infinity/profile",
     },
     {
         label: "Profile Pengurus",
@@ -19,9 +19,9 @@ const ProfileItems = [
 ];
 const InformationItems = [
     {
-        label: "Timeline",
+        label: "Kegiatan",
         icon: <IconCupHot />,
-        href: "/infinity/timeline",
+        href: "/infinity/kegiatan",
     },
 ];
 export default function LargeScreen() {
@@ -39,7 +39,7 @@ export default function LargeScreen() {
                 </Link>
             </NavbarItem>
             <Dropdownmenu title={"Profile"} items={ProfileItems} />
-            <Dropdownmenu title={"Information"} items={InformationItems} />
+            <Dropdownmenu title={"Informasi"} items={InformationItems} />
         </>
     );
 }

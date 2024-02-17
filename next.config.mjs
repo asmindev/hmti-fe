@@ -2,7 +2,20 @@
 
 const nextConfig = {
     images: {
-        domains: ["i.pinimg.com"],
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "i.pinimg.com",
+                port: "",
+                pathname: "/**",
+            },
+            {
+                protocol: "https",
+                hostname: "images.unsplash.com",
+                port: "",
+                pathname: "/**",
+            },
+        ],
     },
     async redirects() {
         return [

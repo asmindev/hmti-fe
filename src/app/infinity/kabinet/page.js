@@ -1,23 +1,64 @@
 import React from "react";
 import Wrapper from "@/components/Wrapper";
+import Container from "./Container";
+
+export const metadata = {
+    title: "Kabinet",
+    description:
+        "Profile Pengurus Himpunan Mahasiswa Teknik Informatika periode 2023/2024",
+};
+
+const ministries = [
+    {
+        name: "Kaderisasi",
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+        sed tenetur et ipsam. Recusandae repudiandae voluptatibus, ab
+        reprehenderit, dolor commodi ea nostrum ducimus eaque tenetur
+        fugit natus neque quod! Molestiae libero odio, nesciunt aliquam
+        magnam modi rerum necessitatibus ipsam ut, iste dicta
+        perferendis neque eaque ducimus amet quas! Consequatur quaerat
+        quia maiores nobis expedita, impedit ut animi fugit dolorum iste
+        id asperiores, corporis eos consectetur? Architecto
+        exercitationem eligendi nihil illum. Rerum commodi culpa fuga,
+        quam rem nisi cum ullam minus veniam non. Iste esse, alias rerum
+        quo suscipit molestias optio? Alias accusamus magnam veritatis
+        illo hic voluptate corporis eos sequi.Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+        sed tenetur et ipsam. Recusandae repudiandae voluptatibus, ab
+        reprehenderit, dolor commodi ea nostrum ducimus eaque tenetur
+        fugit natus neque quod! Molestiae libero odio, nesciunt aliquam
+        magnam modi rerum necessitatibus ipsam ut, iste dicta
+        perferendis neque eaque ducimus amet quas! Consequatur quaerat
+        quia maiores nobis expedita, impedit ut animi fugit dolorum iste
+        id asperiores, corporis eos consectetur? Architecto
+        exercitationem eligendi nihil illum. Rerum commodi culpa fuga,
+        quam rem nisi cum ullam minus veniam non. Iste esse, alias rerum
+        quo suscipit molestias optio? Alias accusamus magnam veritatis
+        illo hic voluptate corporis eos sequi.`,
+        chairman: "LM. Fatanahaw",
+        secretary: "Reza",
+        member: ["Fikri", "Hafizh", "Nafis"],
+    },
+    {
+        name: "Humas",
+        description: "Menjalin hubungan dengan masyarakat HMTI",
+        chairman: "Agrian Wahab",
+        secretary: "Wahyu Nahda Putra",
+        member: ["Fikri", "Hafizh", "Nafis"],
+    },
+    {
+        name: "Sekretariat",
+        description: "Mengatur dan mengorganisir sekretariat HMTI",
+        chairman: "Fiki",
+        secretary: "Nasir Azis Jaelani",
+        member: ["Fikri", "Hafizh", "Nafis"],
+    },
+];
 
 export default function page() {
     return (
         <Wrapper>
             <div className="w-full flex items-center h-full justify-center">
-                <div>
-                    <div className="mt-20 flex flex-col gap-y-4">
-                        <h1 className="uppercase text-xl md:text-3xl lg:text-6xl font-black text-center text-gray-600">
-                            Pengurus
-                        </h1>
-                        <h2 className="text-3xl md:text-6xl lg:text-8xl font-bold text-center text-gray-700">
-                            Himpunan Mahasiswa Teknik Informatika
-                        </h2>
-                        <h3 className="text-md md:text-xl lg:text-3xl font-medium text-center">
-                            Periode 2023/2024
-                        </h3>
-                    </div>
-                </div>
+                <Container ministries={ministries} />
             </div>
         </Wrapper>
     );

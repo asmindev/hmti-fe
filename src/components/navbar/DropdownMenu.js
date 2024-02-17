@@ -16,7 +16,7 @@ export default function Dropdownmenu({ title, items }) {
                 <DropdownTrigger>
                     <Button
                         disableRipple
-                        className="capitalize p-0 bg-transparent data-[hover=true]:bg-transparent w-full text-3xl font-bold py-4 lg:text-sm lg:font-normal"
+                        className="py-4 text-sm font-normal capitalize p-0 bg-transparent data-[hover=true]:bg-transparent w-full"
                         endContent={<IconChevronDown />}
                         radius="sm"
                         variant={"light"}

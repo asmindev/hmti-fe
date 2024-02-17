@@ -21,8 +21,8 @@ export default function SmallScreen() {
             href: "/infinity/kabinet",
         },
         {
-            label: "Timeline",
-            href: "/infinity/timeline",
+            label: "Kegiatan",
+            href: "/infinity/kegiatan",
         },
     ];
     return (
