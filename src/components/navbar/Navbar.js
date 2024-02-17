@@ -42,7 +42,7 @@ export default function NavBar() {
             </NavbarContent>
             <NavbarMenu className="w-full h-full">
                 <div className="relative h-full w-full">
-                    <div className="absolute bottom-0 opacity-5">
+                    <div className="absolute bottom-28 opacity-5">
                         <div className="flex flex-col justify-center items-center select-none">
                             <h1 className="text-8xl font-black">H</h1>
                             <h1 className="text-8xl font-black">M</h1>
