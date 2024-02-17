@@ -9,10 +9,16 @@ const inter = Inter({
 
 export const metadata = {
     title: {
-        default: "HMTI",
-        template: "%s | HMTI",
+        default: "HMTI-UHO",
+        template: "%s | HMTI-UHO",
     },
-    description: "Website HMTI",
+    description:
+        "Website    Himpunan Mahasiswa Teknik Informatika Universitas Haluoleo",
+    icons: {
+        icon: "/hmti-logo.png",
+        shortcut: "/hmti-logo.png",
+        apple: "/hmti-logo.png",
+    },
 };
 
 export default function RootLayout({ children }) {
