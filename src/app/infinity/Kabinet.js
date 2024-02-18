@@ -33,7 +33,7 @@ export default function Kabinet() {
                     </motion.h1>
                     <motion.h3
                         variants={StaggerAnimate.children}
-                        className="mt-2 text-lg text-center italic bg-blue-600 w-fit mx-auto text-white px-2"
+                        className="mt-2 text-sm md:text-lg text-center italic bg-blue-600 w-fit mx-auto text-white px-2"
                     >
                         &quot;Berinovasi dengan etika, berkarya dengan
                         kepemimpinan&quot;
