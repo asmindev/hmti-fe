@@ -14,11 +14,11 @@ export const metadata = {
         default: "HMTI-UHO",
         template: "%s | HMTI-UHO",
     },
-    description: {
-        default:
-            "Website Himpunan Mahasiswa Teknik Informatika Universitas Haluoleo",
-        template:
-            "%s | Website Himpunan Mahasiswa Teknik Informatika Universitas Haluoleo",
+    description:
+        "Website Himpunan Mahasiswa Teknik Informatika, Fakultas Teknik, Universitas Haluoleo, HMTI menyediakan berbagai informasi mengenai Himpunan Mahasiswa Teknik Informatika",
+    authors: {
+        name: "asmindev",
+        url: "https://hmti-uho.vercel.app",
     },
     icons: {
         icon: "/hmti-logo.png",
