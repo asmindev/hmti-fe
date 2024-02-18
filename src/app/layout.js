@@ -10,15 +10,21 @@ const inter = Inter({
  * @type {import('next').Metadata}
  */
 export const metadata = {
+    metadataBase: new URL("https://hmti-uho.vercel.app"),
     title: {
         default: "HMTI-UHO",
         template: "%s | HMTI-UHO",
     },
     description:
         "Website Himpunan Mahasiswa Teknik Informatika, Fakultas Teknik, Universitas Haluoleo, HMTI menyediakan berbagai informasi mengenai Himpunan Mahasiswa Teknik Informatika",
-    authors: {
-        name: "asmindev",
-        url: "https://hmti-uho.vercel.app",
+    authors: [
+        {
+            name: "asmindev",
+            url: "https://github.com/asmindev",
+        },
+    ],
+    openGraph: {
+        images: ["/hmti-logo.png"],
     },
     icons: {
         icon: "/hmti-logo.png",
