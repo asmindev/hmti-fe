@@ -4,7 +4,7 @@ import hmti from "@/public/images/hmti-logo.png";
 
 export default function Timeline2({ time, icon, title, description, author }) {
     return (
-        <div className="flex md:gap-x-3 w-full hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 p-2 rounded">
+        <div className="flex md:gap-x-3 w-full group hover:bg-gray-50 transition-all duration-200 p-2 rounded">
             <div className="w-16 min-w-16 text-end">
                 <time
                     dateTime={time}
@@ -14,9 +14,9 @@ export default function Timeline2({ time, icon, title, description, author }) {
                     {time}
                 </time>
             </div>
-            <div className="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-gray-700">
+            <div className="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-gray-700 group-hover:after:bg-indigo-500  after:transition-all after:duration-200">
                 <div className="relative z-10 size-7 flex justify-center items-center">
-                    <div className="size-2 rounded-full bg-gray-400 dark:bg-gray-600 border border-white ring-1 ring-gray-400 dark:ring-gray-600"></div>
+                    <div className="size-2 rounded-full bg-gray-400 border border-white ring-1 ring-gray-400 dark:ring-gray-600 group-hover:bg-indigo-500 group-hover:ring-indigo-500 transition-all duration-200" />
                 </div>
             </div>
             <div className="grow pt-0.5 pb-8">
@@ -46,7 +46,7 @@ export default function Timeline2({ time, icon, title, description, author }) {
                 </p>
                 <button
                     type="button"
-                    className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                    className="mt-2 hover:bg-gray-100 py-1 px-2 rounded-lg flex items-center text-xs gap-2 text-gray-500"
                 >
                     <Image
                         src={hmti}

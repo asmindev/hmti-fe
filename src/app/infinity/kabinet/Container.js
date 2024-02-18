@@ -36,11 +36,23 @@ export default function Container({ ministries }) {
                     Periode 2023/2024
                 </motion.h3>
             </motion.div>
-            <div className="mt-12 w-full lg:w-1/2 mx-auto text-center">
-                <h1 className="text-3xl md:text-6xl font-black uppercase">
+            <motion.div
+                variants={StaggerAnimate.parent}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                className="mt-12 w-full lg:w-1/2 mx-auto text-center"
+            >
+                <motion.h1
+                    variants={StaggerAnimate.children}
+                    className="text-3xl md:text-6xl font-black uppercase"
+                >
                     Kabinet Infinity
-                </h1>
-                <blockquote className="mt-4 text-xl font-semibold italic text-center text-slate-900">
+                </motion.h1>
+                <motion.blockquote
+                    variants={StaggerAnimate.children}
+                    className="mt-4 text-xl font-semibold italic text-center text-slate-900"
+                >
                     Melangkah Menuju Masa Depan
                     <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block">
                         <span className="relative text-white">
@@ -48,8 +60,8 @@ export default function Container({ ministries }) {
                         </span>
                     </span>
                     dengan Inovasi, Kreativitas, dan Kolaborasi
-                </blockquote>
-            </div>
+                </motion.blockquote>
+            </motion.div>
             <div className="mt-12 w-full lg:w-1/2 mx-auto flex flex-col gap-y-6 items-center justify-center">
                 <Leader />
                 <Sekjen />

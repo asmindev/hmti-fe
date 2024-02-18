@@ -31,6 +31,13 @@ export default function Kabinet() {
                     >
                         Kabinet Infinity
                     </motion.h1>
+                    <motion.h3
+                        variants={StaggerAnimate.children}
+                        className="mt-2 text-lg text-center italic bg-blue-600 w-fit mx-auto text-white px-2"
+                    >
+                        &quot;Berinovasi dengan etika, berkarya dengan
+                        kepemimpinan&quot;
+                    </motion.h3>
                 </motion.div>
             </div>
             <div className="mt-8">
@@ -50,14 +57,18 @@ export default function Kabinet() {
                         className="w-1/2 h-full object-cover"
                     />
                 </div>
-                <div className="w-full flex justify-between">
+                <div className="w-full flex justify-between line-clamp-1">
                     <div>
-                        <h1 className="text-xl font-bold">Muhammad Fadli</h1>
-                        <h2>Ketua</h2>
+                        <h1 className="text-base md:text-xl font-bold">
+                            Muhamad Fadli
+                        </h1>
+                        <h2 className="text-base md:text-lg">Ketua</h2>
                     </div>
                     <div className="flex flex-col items-end">
-                        <h1 className="text-xl font-bold">Anisa Tarimana</h1>
-                        <h2>Wakil Ketua</h2>
+                        <h1 className="text-base md:text-xl font-bold">
+                            Annisa Tarimana
+                        </h1>
+                        <h2 className="text-base md:text-lg">Wakil Ketua</h2>
                     </div>
                 </div>
             </div>

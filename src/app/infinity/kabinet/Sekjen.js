@@ -11,7 +11,7 @@ export default function Sekjen() {
             <motion.div
                 variants={StaggerAnimate.parent}
                 initial="initial"
-                animate="animate"
+                whileInView="animate"
                 exit="exit"
                 className="relative flex items-end after:absolute after:content-[''] after:w-full after:h-1/4 after:bg-gradient-to-t after:from-white after:via-white/50 after:to-transparent"
             >
@@ -37,9 +37,9 @@ export default function Sekjen() {
             >
                 <motion.h1
                     variants={StaggerAnimate.children}
-                    className="text-xl font-bold"
+                    className="text-xl font-bold underline"
                 >
-                    Ricky Ariansyah
+                    M. Ricky Aryansyah
                 </motion.h1>
                 <motion.h2 variants={StaggerAnimate.children}>
                     Sekretaris Jenderal

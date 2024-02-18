@@ -12,7 +12,7 @@ export default function Leader() {
             <motion.div
                 variants={StaggerAnimate.parent}
                 initial="initial"
-                animate="animate"
+                whileInView="animate"
                 exit="exit"
                 className="relative flex items-end after:absolute after:content-[''] after:w-full after:h-1/4 after:bg-gradient-to-t after:from-white after:via-white/50 after:to-transparent"
             >
@@ -25,6 +25,7 @@ export default function Leader() {
                         alt="kabinet"
                         width={200}
                         height={200}
+                        quality={100}
                         className="w-full h-full object-cover"
                     />
                 </motion.div>
@@ -37,6 +38,7 @@ export default function Leader() {
                         alt="kabinet"
                         width={200}
                         height={200}
+                        quality={100}
                         className="w-full h-full object-cover"
                     />
                 </motion.div>
@@ -51,9 +53,9 @@ export default function Leader() {
                 >
                     <motion.h1
                         variants={StaggerAnimate.children}
-                        className="text-xl font-bold"
+                        className="text-base md:text-xl font-bold underline"
                     >
-                        Muhammad Fadli
+                        Muhamad Fadli
                     </motion.h1>
                     <motion.h2 variants={StaggerAnimate.children}>
                         Ketua
@@ -68,7 +70,7 @@ export default function Leader() {
                 >
                     <motion.h1
                         variants={StaggerAnimate.children}
-                        className="text-xl font-bold w-full text-end"
+                        className="text-base md:text-xl font-bold w-full text-end underline"
                     >
                         Annisa Tarimana
                     </motion.h1>
