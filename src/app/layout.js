@@ -1,6 +1,8 @@
 import { Inter } from "next/font/google";
 import "@/public/css/globals.css";
 import NextUIProviders from "./providers";
+import ProgressBarProvider from "@/components/misc/ProgressBarProvider";
+import { Toaster } from "sonner";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -49,7 +51,10 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en" className="scroll-smooth antialiased">
             <body className={`${inter.className} bg-white text-gray-700`}>
-                <NextUIProviders>{children}</NextUIProviders>
+                <ProgressBarProvider>
+                    <Toaster />
+                    <NextUIProviders>{children}</NextUIProviders>
+                </ProgressBarProvider>
             </body>
         </html>
     );

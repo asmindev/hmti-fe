@@ -37,8 +37,7 @@ export default function Content({ items }) {
                     >
                         <PopHover content={<TimelineDetail {...item} />}>
                             <Timeline2
-                                time={item.time}
-                                icon={item.icon}
+                                time={item.date}
                                 title={item.title}
                                 description={item.description}
                                 author={item.author}

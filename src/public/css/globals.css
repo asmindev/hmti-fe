@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-    body {
+    .box-wp {
         background-image: linear-gradient(
                 theme("colors.gray.200") 0.5px,
                 transparent 0.5px

@@ -1,18 +1,22 @@
 import Image from "next/image";
 import React from "react";
 import hmti from "@/public/images/hmti-logo.png";
+import { parseDate } from "@/utils/parseDate";
+const dateWithoutTime = (stringDate) => {
+    // date like this maret, 2022
+    const date = new Date(stringDate);
+    const month = date.toLocaleString("default", { month: "long" });
+    const year = date.getFullYear();
+    const result = `${month}, ${year}`;
 
-export default function Timeline2({ time, icon, title, description, author }) {
+    return result;
+};
+
+export default function Timeline2({ time, title, description, author }) {
     return (
         <div className="flex md:gap-x-3 w-full group hover:bg-gray-50 transition-all duration-200 p-2 rounded">
             <div className="w-16 min-w-16 text-end">
-                <time
-                    dateTime={time}
-                    title={time}
-                    className="text-sm text-gray-600"
-                >
-                    {time}
-                </time>
+                <p className="text-sm text-gray-600">{dateWithoutTime(time)}</p>
             </div>
             <div className="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-gray-700 group-hover:after:bg-indigo-500  after:transition-all after:duration-200">
                 <div className="relative z-10 size-7 flex justify-center items-center">
@@ -44,9 +48,9 @@ export default function Timeline2({ time, icon, title, description, author }) {
                 <p className="mt-1 text-sm text-gray-600 dark:text-gray-400 text-justify">
                     {description}
                 </p>
-                <button
-                    type="button"
-                    className="mt-2 hover:bg-gray-100 py-1 px-2 rounded-lg flex items-center text-xs gap-2 text-gray-500"
+                <div
+                    role="button"
+                    className="w-fit mt-2 hover:bg-gray-200/50 py-1 px-2 rounded-lg flex items-center text-xs gap-2 text-gray-500"
                 >
                     <Image
                         src={hmti}
@@ -55,8 +59,8 @@ export default function Timeline2({ time, icon, title, description, author }) {
                         height={24}
                         className="flex-shrink-0 size-4 rounded-full"
                     />
-                    {author}
-                </button>
+                    {author} • {parseDate(time)}
+                </div>
             </div>
         </div>
     );

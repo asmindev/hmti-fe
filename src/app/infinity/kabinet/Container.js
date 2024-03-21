@@ -69,10 +69,10 @@ export default function Container({ ministries }) {
             <div className="mt-12 w-full flex flex-wrap justify-center">
                 {ministries.map((ministry, i) => (
                     <div
-                        className="p-4 w-full md:w-1/2 lg:w-1/4 flex items-center justify-center"
+                        className="p-4 h-full w-full md:w-1/2 lg:w-1/4 flex items-center justify-center"
                         key={i}
                     >
-                        <div className="w-full border rounded p-4 bg-white">
+                        <div className="w-full min-h-full border rounded p-4 bg-white">
                             <PopHover
                                 content={
                                     <MinistryDesc

@@ -2,10 +2,21 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  provider = "prisma-client-js"
+    provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+    provider = "mysql"
+    url      = env("DATABASE_URL")
+}
+
+model activity {
+    id          String   @id @default(uuid())
+    title       String
+    description String   @db.Text
+    date        DateTime
+    leader      String
+    is_done     Boolean  @default(false)
+    author      String   @default("HMTI")
+    logo        String   @default("hmti-logo.png")
 }

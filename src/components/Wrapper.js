@@ -47,7 +47,7 @@ export default function Wrapper({ className, children }) {
     };
 
     return (
-        <motion.section ref={ref} className={className}>
+        <motion.section ref={ref} className={`box-wp`}>
             <motion.div
                 variants={mouseVariants}
                 initial="initial"
@@ -60,7 +60,9 @@ export default function Wrapper({ className, children }) {
             <nav className="sticky top-0 w-full z-[99]">
                 <Navbar />
             </nav>
-            <motion.section className="w-full min-h-screen px-2 md:px-4">
+            <motion.section
+                className={`w-full min-h-screen px-2 md:px-4 ${className}`}
+            >
                 {children}
             </motion.section>
             <footer>
