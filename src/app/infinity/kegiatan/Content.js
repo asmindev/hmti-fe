@@ -3,7 +3,7 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Timeline2 from "./Timeline2";
 import StaggerAnimate from "@/utils/StaggerAnimate";
-import PopHover from "../kabinet/PopHover";
+import PopHover from "@/components/PopHover";
 
 const TimelineDetail = ({ title, description }) => {
     return (

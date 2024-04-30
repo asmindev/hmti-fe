@@ -5,7 +5,7 @@ import StaggerAnimate from "@/utils/StaggerAnimate";
 import Leader from "./Leader";
 import Sekjen from "./Sekjen";
 import Ministry, { MinistryDesc } from "./Ministry";
-import PopHover from "./PopHover";
+import PopHover from "../../../components/PopHover";
 
 export default function Container({ ministries }) {
     return (
@@ -66,13 +66,10 @@ export default function Container({ ministries }) {
                 <Leader />
                 <Sekjen />
             </div>
-            <div className="mt-12 w-full flex flex-wrap justify-center">
+            <div className="my-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {ministries.map((ministry, i) => (
-                    <div
-                        className="p-4 h-full w-full md:w-1/2 lg:w-1/4 flex items-center justify-center"
-                        key={i}
-                    >
-                        <div className="w-full min-h-full border rounded p-4 bg-white">
+                    <div className="h-full w-full" key={i}>
+                        <div className="w-full h-full rounded-lg p-4 bg-white">
                             <PopHover
                                 content={
                                     <MinistryDesc

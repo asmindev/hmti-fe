@@ -14,7 +14,7 @@ export default function Leader() {
                 initial="initial"
                 whileInView="animate"
                 exit="exit"
-                className="relative flex items-end after:absolute after:content-[''] after:w-full after:h-1/4 after:bg-gradient-to-t after:from-white after:via-white/50 after:to-transparent"
+                className="relative flex items-end after:absolute after:content-[''] after:w-full after:h-1/4 after:bg-gradient-to-t after:from-stone-100 after:via-stone/50 after:to-transparent"
             >
                 <motion.div
                     className="w-full h-full"

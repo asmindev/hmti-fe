@@ -50,7 +50,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en" className="scroll-smooth antialiased">
-            <body className={`${inter.className} bg-white text-gray-700`}>
+            <body className={`${inter.className} bg-stone-100 text-gray-700`}>
                 <ProgressBarProvider>
                     <Toaster />
                     <NextUIProviders>{children}</NextUIProviders>

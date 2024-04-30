@@ -27,7 +27,7 @@ export default function Kabinet() {
                     </motion.h2>
                     <motion.h1
                         variants={StaggerAnimate.children}
-                        className="mt-4 text-3xl md:text-5xl font-black text-gray-700 bg-gradient-to-b from-transparent via-white to-transparent"
+                        className="mt-4 text-3xl md:text-5xl font-black text-gray-700 bg-gradient-to-b from-transparent via-stone-100 to-transparent"
                     >
                         Kabinet Infinity
                     </motion.h1>
@@ -41,7 +41,7 @@ export default function Kabinet() {
                 </motion.div>
             </div>
             <div className="mt-8">
-                <div className="relative flex items-end after:absolute after:content-[''] after:w-full after:h-1/4 after:bg-gradient-to-t after:from-white after:via-white/50 after:to-transparent">
+                <div className="relative flex items-end after:absolute after:content-[''] after:w-full after:h-1/4 after:bg-gradient-to-t after:from-stone-100 after:via-current/50 after:to-transparent">
                     <Image
                         src={ketua}
                         alt="kabinet"
@@ -75,7 +75,7 @@ export default function Kabinet() {
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="w-full h-full flex flex-col gap-3 md:gap-5 lg:gap-6">
                     <h1 className="text-3xl font-bold">Visi</h1>
-                    <p className="leading-relaxed text-left text-gray-500 text-sm bg-gradient-to-b from-transparent via-white to-transparent">
+                    <p className="leading-relaxed text-left text-gray-500 text-sm bg-gradient-to-b from-transparent via-stone-100 to-transparent">
                         Menjadikan HMTI FT-UHO sebagai Organisasi Mahasiswa yang
                         Unggul, Berintegritas, dan Membumi: Menginspirasi
                         Perubahan Positif di dalam Kampus dengan Etika, Inovasi,
@@ -86,7 +86,7 @@ export default function Kabinet() {
                     <h1 className="text-3xl font-bold w-full text-right">
                         Misi
                     </h1>
-                    <div className="text-gray-500 text-sm bg-gradient-to-b from-transparent via-white to-transparent">
+                    <div className="text-gray-500 text-sm bg-gradient-to-b from-transparent via-stone-100 to-transparent">
                         <ul className="list-disc list-outside text-justify leading-relaxed">
                             <li>
                                 Menjadikan HMTI FT-UHO forum terbuka yang

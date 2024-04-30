@@ -15,7 +15,7 @@ export default function Suggest() {
             </div>
             <div className="mt-12 w-11/12 md:w-10/12 lg:w-3/4 mx-auto flex justify-center items-center text-center">
                 <p className="text-md md:text-lg lg:text-xl">
-                    Jika anda ingin memberikan saran dan kritik, anda dapat
+                    Jika anda ingin memberikan saran atau kritik, anda dapat
                     mengisi form bawah ini
                 </p>
             </div>

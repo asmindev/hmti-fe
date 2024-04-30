@@ -15,8 +15,10 @@ export function MinistryDesc({ name, desc }) {
 
 export default function Ministry({ name, chairman, secretary, member }) {
     return (
-        <>
-            <h1 className="text-lg font-bold text-center">{name}</h1>
+        <div className="w-full h-full">
+            <h1 className="text-xl font-bold text-center underline mb-2">
+                {name}
+            </h1>
             <table className="w-full table-auto">
                 <tbody className="text-sm">
                     <tr>
@@ -33,8 +35,8 @@ export default function Ministry({ name, chairman, secretary, member }) {
                         <td className="px-2 text-start font-medium flex">
                             Anggota
                         </td>
-                        <td className="px-2 text-start">
-                            <ul>
+                        <td className="pl-6 pr-2 text-start">
+                            <ul className="list-outside list-disc">
                                 {member.map((m) => (
                                     <li key={m}>{m}</li>
                                 ))}
@@ -43,6 +45,6 @@ export default function Ministry({ name, chairman, secretary, member }) {
                     </tr>
                 </tbody>
             </table>
-        </>
+        </div>
     );
 }

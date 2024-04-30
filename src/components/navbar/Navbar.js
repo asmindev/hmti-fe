@@ -13,10 +13,6 @@ import {
     NavbarMenuToggle,
     NavbarMenu,
 } from "@nextui-org/react";
-import { IconChevronDown, IconCupHot } from "@irsyadadl/paranoid";
-import { AnimatePresence, motion } from "framer-motion";
-import StaggerAnimate from "@/utils/StaggerAnimate";
-import usePathName from "@/hooks/usePathName";
 import LargeScreen from "./LargeScreen";
 import SmallScreen from "./SmallScreen";
 
@@ -24,10 +20,17 @@ export default function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
     return (
-        <Navbar onMenuOpenChange={setIsMenuOpen} isBordered>
+        <Navbar
+            onMenuOpenChange={setIsMenuOpen}
+            isBordered
+            className="bg-[#C2FF0D] sm:py-8"
+        >
             <NavbarContent>
                 <NavbarBrand>
-                    <Link href="/infinity" className="font-bold text-2xl ">
+                    <Link
+                        href="/infinity"
+                        className="font-bold text-2xl md:text-6xl md:font-black text-white drop-shadow"
+                    >
                         HMTI
                     </Link>
                 </NavbarBrand>

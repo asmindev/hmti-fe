@@ -10,12 +10,20 @@ import {
     Tooltip,
 } from "@nextui-org/react";
 import { parseDate } from "@/utils/parseDate";
-import ButtonEdit from "./ButtonEdit";
 import { destroy } from "./actions";
 import { toast } from "sonner";
 
 export default function TableUI({ data }) {
     const [items, setItems] = useState(data);
+    const onDelete = async (id) => {
+        try {
+            await destroy(id);
+            setItems(items.filter((item) => item.id !== id));
+            toast.success("Success delete document");
+        } catch (error) {
+            toast.error("Failed delete document");
+        }
+    };
     return (
         <Table
             aria-label="Example table with dynamic content"
@@ -32,42 +40,30 @@ export default function TableUI({ data }) {
             }}
         >
             <TableHeader>
-                <TableColumn key="leader">Ketua</TableColumn>
-                <TableColumn key="activity">Kegiatan</TableColumn>
+                <TableColumn key="title">Judul</TableColumn>
                 <TableColumn key="desc">Deskripsi</TableColumn>
                 <TableColumn key="date" allowsSorting>
                     Tanggal
                 </TableColumn>
                 <TableColumn key="action">Actions</TableColumn>
             </TableHeader>
-            <TableBody emptyContent="No Data" items={items}>
+            <TableBody emptyContent="No data to display" items={items}>
                 {(item) => (
                     <TableRow key={item.id}>
-                        <TableCell>{item.leader}</TableCell>
                         <TableCell>{item.title}</TableCell>
-                        <TableCell>{item.description.slice(0, 20)}</TableCell>
+                        <TableCell className="w-1/2">
+                            {item.description}
+                        </TableCell>
                         <TableCell>{parseDate(item.date)}</TableCell>
                         <TableCell>
                             <div className="flex gap-2 items-center">
-                                <div>
-                                    <ButtonEdit item={item} />
-                                </div>
                                 <Tooltip
                                     content="Hapus Kegiatan"
                                     color="danger"
                                 >
                                     <button
                                         type="button"
-                                        onClick={async () => {
-                                            const result = await destroy(
-                                                item.id
-                                            );
-                                            if (result) {
-                                                toast.success(
-                                                    "Data berhasil dihapus"
-                                                );
-                                            }
-                                        }}
+                                        onClick={() => onDelete(item.id)}
                                     >
                                         <svg
                                             className="w-5 h-5"

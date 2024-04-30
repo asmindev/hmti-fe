@@ -10,12 +10,20 @@ import {
     Tooltip,
 } from "@nextui-org/react";
 import { parseDate } from "@/utils/parseDate";
-import ButtonEdit from "./ButtonEdit";
 import { destroy } from "./actions";
 import { toast } from "sonner";
 
 export default function TableUI({ data }) {
     const [items, setItems] = useState(data);
+    const onDelete = async (id) => {
+        try {
+            await destroy(id);
+            setItems(items.filter((item) => item.id !== id));
+            toast.success("Success delete document");
+        } catch (error) {
+            toast.error("Failed delete document");
+        }
+    };
     return (
         <Table
             aria-label="Example table with dynamic content"
@@ -32,9 +40,9 @@ export default function TableUI({ data }) {
             }}
         >
             <TableHeader>
-                <TableColumn key="leader">Ketua</TableColumn>
-                <TableColumn key="activity">Kegiatan</TableColumn>
-                <TableColumn key="desc">Deskripsi</TableColumn>
+                <TableColumn key="title">Judul</TableColumn>
+                <TableColumn key="title">Deskripsi</TableColumn>
+                <TableColumn key="file">File</TableColumn>
                 <TableColumn key="date" allowsSorting>
                     Tanggal
                 </TableColumn>
@@ -43,31 +51,42 @@ export default function TableUI({ data }) {
             <TableBody emptyContent="No Data" items={items}>
                 {(item) => (
                     <TableRow key={item.id}>
-                        <TableCell>{item.leader}</TableCell>
                         <TableCell>{item.title}</TableCell>
-                        <TableCell>{item.description.slice(0, 20)}</TableCell>
+                        <TableCell className="w-10">
+                            {item.description}
+                        </TableCell>
+                        <TableCell>
+                            <a href={item.url} target="_blank" rel="noreferrer">
+                                <svg
+                                    className="size-5"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                >
+                                    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                                    <polyline points="14 2 14 8 20 8" />
+                                    <line x1="16" x2="8" y1="13" y2="13" />
+                                    <line x1="16" x2="8" y1="17" y2="17" />
+                                    <line x1="10" x2="8" y1="9" y2="9" />
+                                </svg>
+                            </a>
+                        </TableCell>
                         <TableCell>{parseDate(item.date)}</TableCell>
                         <TableCell>
                             <div className="flex gap-2 items-center">
-                                <div>
-                                    <ButtonEdit item={item} />
-                                </div>
                                 <Tooltip
                                     content="Hapus Kegiatan"
                                     color="danger"
                                 >
                                     <button
                                         type="button"
-                                        onClick={async () => {
-                                            const result = await destroy(
-                                                item.id
-                                            );
-                                            if (result) {
-                                                toast.success(
-                                                    "Data berhasil dihapus"
-                                                );
-                                            }
-                                        }}
+                                        onClick={() => onDelete(item.id)}
                                     >
                                         <svg
                                             className="w-5 h-5"

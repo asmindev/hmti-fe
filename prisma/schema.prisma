@@ -6,17 +6,32 @@ generator client {
 }
 
 datasource db {
-    provider = "mysql"
+    provider = "mongodb"
     url      = env("DATABASE_URL")
 }
 
 model activity {
-    id          String   @id @default(uuid())
+    id          String   @id @default(uuid()) @map("_id") @db.ObjectId
     title       String
-    description String   @db.Text
+    description String
     date        DateTime
     leader      String
     is_done     Boolean  @default(false)
     author      String   @default("HMTI")
     logo        String   @default("hmti-logo.png")
+}
+
+model document {
+    id          String   @id @default(uuid()) @map("_id") @db.ObjectId
+    title       String
+    description String
+    date        DateTime @default(now())
+    url         String
+}
+
+model suggestion {
+    id          String   @id @default(uuid()) @map("_id") @db.ObjectId
+    title       String
+    description String
+    date        DateTime @default(now())
 }
