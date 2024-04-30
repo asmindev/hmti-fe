@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
-const prisma = new PrismaClient();
 class SuggestionController {
     constructor() {
+        const prisma = new PrismaClient();
         this.suggestions = prisma.suggestion;
     }
 
