@@ -6,7 +6,6 @@ import SuggestionController from "@/controllers/suggestion.controllers";
 export default async function Document() {
     const suggestion = new SuggestionController();
     const suggestions = await suggestion.all();
-
     return (
         <Layouts>
             <div className="w-full border rounded-xl bg-white px-6 py-4">
