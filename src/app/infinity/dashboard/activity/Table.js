@@ -18,8 +18,8 @@ export default function TableUI({ data }) {
     const [items, setItems] = useState(data);
     return (
         <Table
-            aria-label="Example table with dynamic content"
-            className="table-auto"
+            aria-label="Table for displaying activity data"
+            className={"table-fixed"}
             isCompact={false}
             isStriped={true}
             sortDescriptor={{ column: "date", direction: "descending" }}
@@ -49,10 +49,9 @@ export default function TableUI({ data }) {
                         <TableCell>{parseDate(item.date)}</TableCell>
                         <TableCell>
                             <div className="flex gap-2 items-center">
-                                <div>
-                                    <ButtonEdit item={item} />
-                                </div>
+                                <ButtonEdit item={item} />
                                 <Tooltip
+                                    className="flex items-center justify-center"
                                     content="Hapus Kegiatan"
                                     color="danger"
                                 >

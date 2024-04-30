@@ -41,7 +41,7 @@ export default function TableUI({ data }) {
         >
             <TableHeader>
                 <TableColumn key="title">Judul</TableColumn>
-                <TableColumn key="title">Deskripsi</TableColumn>
+                <TableColumn key="desc">Deskripsi</TableColumn>
                 <TableColumn key="file">File</TableColumn>
                 <TableColumn key="date" allowsSorting>
                     Tanggal

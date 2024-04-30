@@ -14,7 +14,7 @@ export default function Layouts({ children }) {
             >
                 <Sidebar />
             </aside>
-            <main className="flex-1 min-h-svh h-full">
+            <main className="w-full min-h-svh h-full">
                 <header className="h-fit">
                     <div className="w-full flex justify-between bg-pink-500 p-8">
                         <div className="w-full h-full flex items-center">

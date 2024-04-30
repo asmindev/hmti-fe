@@ -20,7 +20,9 @@ export default function Content({ items }) {
                 </button>
             </div>
             <Form isOpen={isOpen} onOpenChange={onOpenChange} onOpen={onOpen} />
-            <TableUI data={items} />
+            <div className="w-full">
+                <TableUI data={items} />
+            </div>
         </div>
     );
 }

@@ -9,6 +9,7 @@ import {
 } from "@nextui-org/react";
 import { toast } from "sonner";
 import { store } from "./actions";
+import Image from "next/image";
 
 function InputEl({ onClose }) {
     const onSubmit = (e) => {
@@ -56,17 +57,15 @@ export default function Form() {
         <>
             <div className="flex flex-wrap gap-3">
                 <button
+                    type="button"
                     onClick={() => onOpen()}
-                    className="text-base px-4 py-1 rounded"
+                    className="text-base px-8 py-4 rounded-xl bg-white group hover:bg-blue-600 hover:text-white transition-all duration-200"
                 >
                     <div className="my-4">
                         <h1 className="text-2xl font-extrabold">Kotak Saran</h1>
                     </div>
-                    <div>
-                        <input
-                            type="text"
-                            className="w-full py-3 px-5 rounded-2xl border"
-                        />
+                    <div className="w-full border px-8 py-2 rounded-lg border-dashed border-gray-600 group-hover:border-white">
+                        <h1 className="font-medium">Masukkan saran</h1>
                     </div>
                 </button>
             </div>

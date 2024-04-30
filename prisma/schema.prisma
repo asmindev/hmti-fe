@@ -11,7 +11,7 @@ datasource db {
 }
 
 model activity {
-    id          String   @id @default(uuid()) @map("_id") @db.ObjectId
+    id          String   @id @default(auto()) @map("_id") @db.ObjectId
     title       String
     description String
     date        DateTime
@@ -22,7 +22,7 @@ model activity {
 }
 
 model document {
-    id          String   @id @default(uuid()) @map("_id") @db.ObjectId
+    id          String   @id @default(auto()) @map("_id") @db.ObjectId
     title       String
     description String
     date        DateTime @default(now())
@@ -30,7 +30,7 @@ model document {
 }
 
 model suggestion {
-    id          String   @id @default(uuid()) @map("_id") @db.ObjectId
+    id          String   @id @default(auto()) @map("_id") @db.ObjectId
     title       String
     description String
     date        DateTime @default(now())
