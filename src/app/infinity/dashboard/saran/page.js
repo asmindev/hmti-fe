@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Layouts from "../components/Layouts";
 import Content from "./Content";
-import { PrismaClient } from "@prisma/client";
+import SuggestionController from "@/controllers/suggestion.controllers";
 
 export default async function Document() {
-    const prisma = new PrismaClient();
-    const suggestions = await prisma.suggestion.findMany({});
+    const suggestion = new SuggestionController();
+    const suggestions = await suggestion.all();
+
     return (
         <Layouts>
             <div className="w-full border rounded-xl bg-white px-6 py-4">

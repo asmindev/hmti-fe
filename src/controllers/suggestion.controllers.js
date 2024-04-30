@@ -34,5 +34,4 @@ class SuggestionController {
     }
 }
 
-const suggestion = new SuggestionController();
-export default suggestion;
+export default SuggestionController;
